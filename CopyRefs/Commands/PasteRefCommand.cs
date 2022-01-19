@@ -12,8 +12,7 @@ using VSLangProj;
 using System.Collections.Generic;
 using System.Globalization;
 
-// Remove duplicates
-// https://gist.github.com/AnasFullStack/b9eba91cff214427d424fe6747a77987
+// Remove duplicates https://gist.github.com/AnasFullStack/b9eba91cff214427d424fe6747a77987
 
 namespace CopyRefs
 {
@@ -62,7 +61,19 @@ namespace CopyRefs
                 var text = Clipboard.GetText();
 
                 if (!text.StartsWithAny("copyref:file:", "copyref:gac:", "copyref:proj:"))
-                    return;
+                {
+                    try
+                    {
+                        if (File.Exists(text))
+                            text = "copyref:file:" + text;
+                        else
+                            return;
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
 
                 Project destProject = Global.Dte.GetSelectedProject();
                 if (destProject == null)
