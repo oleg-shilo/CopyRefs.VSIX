@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="CopyRefs.OlegShilo.15646bc7-91dd-46c8-9ec4-77b7705a5024" Version="1.0.2" Language="en-US" Publisher="Oleg Shilo" />
+        <Identity Id="CopyRefs.OlegShilo.15646bc7-91dd-46c8-9ec4-77b7705a5024" Version="1.0.3" Language="en-US" Publisher="Oleg Shilo" />
         <DisplayName>CopyRefs</DisplayName>
         <Description xml:space="preserve">Simple extension for copying assembly references from one project to another. </Description>
         <License>licence.txt</License>
